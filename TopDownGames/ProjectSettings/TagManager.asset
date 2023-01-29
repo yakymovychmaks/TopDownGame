@@ -3,15 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Teleport
+  - Plaer
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - EnemyLay
   - Water
   - UI
-  - 
+  - Plaer
   - 
   - 
   - 
