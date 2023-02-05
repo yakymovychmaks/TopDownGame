@@ -13,6 +13,7 @@ public class Shooting : MonoBehaviour
     float nextAttackTime = 0f;
 
     [SerializeField] private Plaer _person;
+    [SerializeField] private AudioSource _ShotsAudio;
 
     // bool shot = false;
 
@@ -51,6 +52,7 @@ public class Shooting : MonoBehaviour
                 {
                     Shoot();
                     nextAttackTime = Time.time + 1f / _attackRate;
+                    _ShotsAudio.Play();
                 }
         // }
         // else 

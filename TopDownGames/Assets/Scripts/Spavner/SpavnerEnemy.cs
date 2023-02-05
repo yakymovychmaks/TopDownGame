@@ -7,12 +7,13 @@ public class SpavnerEnemy : MonoBehaviour
     [SerializeField] private Transform _spavnPoint;
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private float _spavnRate = 1f;
-    public float _spavner;
+    private float _spavner;
     [SerializeField] private int _setDifcalt = 50;
     public int _dificalt;
     float nextSpavnTime = 0f;
     private void Start()
     {
+        
         _spavner = _spavnRate;
         _dificalt = _setDifcalt;
     }
