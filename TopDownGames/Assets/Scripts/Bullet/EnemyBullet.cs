@@ -11,21 +11,22 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private float _distance = 10f;
     [SerializeField] private LayerMask _whatIsSolid;
     [SerializeField] private float _radiusRaucast = 10f;
-    // [SerializeField] private PlaerMovement _plaerPos;
+    [SerializeField] private float _destroyTime = 1f;
     [SerializeField] private GameObject _partSistem;
     
     void Start()
     {
-         Destroy(gameObject, 1f);
+         Destroy(gameObject, _destroyTime);
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         RaycastHit2D hitInfo = Physics2D.CircleCast(transform.position, _radiusRaucast, transform.up, _distance, _whatIsSolid);
         if(hitInfo.collider != null)
         {
-            //Instantiate(_partSistem, transform.position, Quaternion.identity);
+            
             if(hitInfo.collider.CompareTag("Plaer"))
             {
                 Instantiate(_partSistem, transform.position, Quaternion.identity);

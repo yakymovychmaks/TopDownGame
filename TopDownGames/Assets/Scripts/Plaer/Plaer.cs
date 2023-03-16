@@ -18,6 +18,7 @@ public class Plaer : MonoBehaviour
     [SerializeField] private TMP_Text _score;
     public int Score = 0;
     
+    int _maxScore;
 
     public void SetHealth(int newValue) 
     {
@@ -33,9 +34,14 @@ public class Plaer : MonoBehaviour
 
     void Update()
     {
+        if(Score > PlayerPrefs.GetInt("score"))
+        
+            PlayerPrefs.SetInt("score", Score);          
+        
+        _maxScore = PlayerPrefs.GetInt("score");
         if(_health <= 0)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Store");
         }
     }
 }

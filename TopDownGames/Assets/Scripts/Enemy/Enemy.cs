@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     [SerializeField] private PlaerMovement _plaer;
     [SerializeField] private Rigidbody2D _rb;
     // [SerializeField] private Transform _transform;
     [SerializeField] private LayerMask _whatIsSolid;
     [SerializeField] private float _radiusRaucast = 0.5f;
     [SerializeField] private float _distance = 1f;
-    [SerializeField] private int _damage = 10;
+    [SerializeField] private int _damage;
     public int Damage => _damage;
-    [SerializeField] private float _spead = 5f;
+    [SerializeField] private float _spead;
     [SerializeField] private int _health = 20;
     public int Health => _health;
     [SerializeField] private GameObject _partSistem;
     Vector2 movement;
     
     public void SetHealth(int newValue) => _health = newValue;
-    // public void SetMovements(Vector2 plaerPos)
+    
+    // public void SetsDifficults(int setsdiff)
     // {
-    //     movement = plaerPos;
+    //     if(setsdiff == 0){}
+    //     else
+    //     {
+    //         PlayerPrefs.SetInt("SetDamage", 5);
+    //         PlayerPrefs.SetFloat("SetSpead", 2f);
+    //     }
     // }
 
     void Start()
     {
+        _damage = PlayerPrefs.GetInt("SetDamage");
+        _spead = PlayerPrefs.GetFloat("SetSpead");
         _plaer = FindObjectOfType<PlaerMovement>();
         Destroy(gameObject, 30f);
         

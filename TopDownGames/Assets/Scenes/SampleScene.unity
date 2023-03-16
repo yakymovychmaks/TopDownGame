@@ -659,7 +659,7 @@ MonoBehaviour:
   _firepoint: {fileID: 1659600222}
   _bulletPrefab: {fileID: 5985358585436075870, guid: cdfdb9b9e90352344a88108a747580a1,
     type: 3}
-  _attackRate: 5
+  _attackRate: 0
   _plaerPos: {fileID: 1423158272}
   _rb: {fileID: 110590851}
 --- !u!61 &403618336
@@ -45168,7 +45168,7 @@ MonoBehaviour:
   _firepoint: {fileID: 1334632041}
   _bulletPrefab: {fileID: 5985358585436075870, guid: cdfdb9b9e90352344a88108a747580a1,
     type: 3}
-  _attackRate: 5
+  _attackRate: 0
   _plaerPos: {fileID: 1423158272}
   _rb: {fileID: 220932921}
 --- !u!212 &1595777421
