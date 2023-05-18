@@ -33,8 +33,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        _damage = PlayerPrefs.GetInt("SetDamage");
-        _spead = PlayerPrefs.GetFloat("SetSpead");
+
         _plaer = FindObjectOfType<PlaerMovement>();
         Destroy(gameObject, 30f);
         
